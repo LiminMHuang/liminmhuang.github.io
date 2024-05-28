@@ -6,7 +6,9 @@ website:
   title: "Limin Huang"
   navbar:
     right:
-      - about.qmd
+      - text: About
+        href: index.qmd
+      - blog.qmd
       - icon: linkedin
         href: https://www.linkedin.com/in/huang-limin
       - icon: github

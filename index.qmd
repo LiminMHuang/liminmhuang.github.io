@@ -1,14 +1,19 @@
 ---
-title: "LiminWebsite"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
-page-layout: full
-title-block-banner: true
+title: "Limin Huang"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://x.com/LiminMHuang
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/huang-limin/
+    - icon: github
+      text: Github
+      href: https://github.com/LiminMHuang
+
 ---
 
-
+I am a postgraduate student at the University of Cambridge in MPhil Economic Research.
