@@ -3,14 +3,16 @@ project:
   output-dir: docs
 
 website:
-  title: "LiminWebsite"
+  title: "Limin Huang"
   navbar:
     right:
       - about.qmd
+      - icon: linkedin
+        href: https://www.linkedin.com/in/huang-limin
       - icon: github
-        href: https://github.com/
+        href: https://github.com/LiminMHuang
       - icon: twitter
-        href: https://twitter.com
+        href: https://x.com/LiminMHuang
 format:
   html:
     theme: cosmo
