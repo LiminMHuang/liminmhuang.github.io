@@ -1,8 +1,8 @@
 ---
 title: "Limin Huang"
-image: profile.jpg
 about:
   template: jolla
+  image: profile.jpg
   links:
     - icon: twitter
       text: Twitter
@@ -16,4 +16,4 @@ about:
 
 ---
 
-I am a postgraduate student at the University of Cambridge in MPhil Economic Research.
+I am a postgraduate student at the University of Cambridge studying MPhil Economic Research.

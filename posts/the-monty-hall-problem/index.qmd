@@ -1,0 +1,201 @@
+---
+title: "The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics"
+author: "Limin Huang"
+date: "2024-05-29"
+categories: [Economics, Statistics]
+
+---
+
+\documentclass[twoside]{article}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{microtype}
+\usepackage{forest}
+
+\geometry{a4paper, margin=1in}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{The Monty Hall Problem}
+\fancyhead[RE]{Behavioural Economics and Bayesian Statistics}
+
+\title{The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics}
+\author{Limin Huang\\\href{mailto:lh778@cam.ac.uk}{lh778@cam.ac.uk}}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+The Monty Hall problem, based on the classic game show \emph{Let's Make a Deal}, is a captivating brain teaser that has perplexed people for decades. The problem goes like this: a contestant faces three doors, behind one of which is a car, and two goats are behind the other two doors. The contestant picks a door, say Door 1. The host (who knows what is behind each door) opens another door, say Door 3, revealing a goat. The host then asks the contestant if they want to switch to Door 2. Should the contestant switch? \cite{selvin1975}
+
+Intuitively, most people think the odds are 50-50 at this point, so switching has no advantage. However, this is where the paradox lies. The correct strategy is always to switch doors, as it doubles the chances of winning from $\frac{1}{3}$ to $\frac{2}{3}$ \cite{vossavant1990}. This counterintuitive solution has stumped many, including renowned mathematician Paul Erdős \cite{vazsonyi1999}.
+
+\section*{Behavioural Economics Perspective}
+From a behavioural economics perspective, the Monty Hall problem highlights several cognitive biases that influence decision-making. One such bias is the illusion of control, where people tend to overestimate their ability to control or influence outcomes \cite{langer1975}. In this case, contestants may feel that their initial choice is more likely to be correct, even though the probability has not changed. Another relevant bias is the sunk cost fallacy, where people are reluctant to abandon a choice they've already made, even if switching would be advantageous \cite{arkesblumer1985}.
+
+\section*{Bayesian Statistics Perspective}
+Interestingly, the Monty Hall problem can be elegantly explained using Bayesian statistics. Bayes' theorem is a mathematical formula that describes how to update probabilities based on new evidence \cite{bayesprice1763}. In the context of the Monty Hall problem, let us define three events:
+
+\begin{itemize}
+    \item $A$: The car is behind Door 1
+    \item $B$: The car is behind Door 2
+    \item $C$: Host opens Door 3
+\end{itemize}
+
+Using Bayes' theorem, we can calculate the probability of the car being behind Door 2, given that the host opened Door 3:
+
+\begin{equation}
+P(B \mid C) = \frac{P(C \mid B) \cdot P(B)}{P(C)}
+\label{eq:bayes}
+\end{equation}
+
+We know that:
+\begin{align*}
+P(B) &= \frac{1}{3} \quad \text{(initial probability of car being behind Door 2)} \\
+P(C \mid B) &= 1 \quad \text{(the host must open Door 3 if the car is behind Door 2)} \\
+P(C) &= \frac{1}{3} \cdot \frac{1}{2} + \frac{1}{3} \cdot 0 + \frac{1}{3} \cdot 1 = \frac{1}{2} \quad \text{(probability of host opening Door 3)}
+\end{align*}
+
+To clarify the calculation of $P(C)$, let us consider all possible scenarios where the host opens Door 3\footnote{The probability of ``Host opens 3 \(|\) Car@1" is \(\frac{1}{2}\) because the host can randomly choose between Door 2 and Door 3, but not door 1 (since they know the car is behind door 1). A similar argument applies to the probability ``Host opens 3 \(|\) Car@2" and the probability of ``Host opens 3 \(|\) Car@3".}:
+\[
+\begin{aligned}
+P(\text{Car@1 and Host opens 3}) &= P(\text{Car@1}) \times P(\text{Host opens 3} \mid \text{Car@1}) = \frac{1}{3} \times \frac{1}{2} = \frac{1}{6} \\
+P(\text{Car@2 and Host opens 3}) &= P(\text{Car@2}) \times P(\text{Host opens 3} \mid \text{Car@2}) = \frac{1}{3} \times 1 = \frac{1}{3} \\
+P(\text{Car@3 and Host opens 3}) &= P(\text{Car@3}) \times P(\text{Host opens 3} \mid \text{Car@3}) = \frac{1}{3} \times 0 = 0
+\end{aligned}
+\]
+
+
+Summing these probabilities:
+\[
+P(C) = \frac{1}{6} + \frac{1}{3} + 0 = \frac{1}{2}
+\]
+Plugging the values into Equation \ref{eq:bayes}:
+\[
+P(B \mid C) = \frac{1 \cdot \frac{1}{3}}{\frac{1}{2}} = \frac{2}{3}
+\]
+This calculation confirms that switching doors yields a $\frac{2}{3}$ probability of winning \cite{gill2002}.
+
+\section*{Visualisation of the Monty Hall Problem}
+Another intuitive way to understand the Monty Hall problem is through a probability tree diagram. The diagrams below illustrate the possible outcomes and their probabilities for the case when the car is behind door 1 \footnote{Similar diagrams can be drawn for the cases where the car is behind door 2 or door 3.}:
+
+\[
+P(\text{prize} \mid \text{switch}) = \frac{2}{3}
+\]
+
+\begin{forest}
+for tree={
+    grow=south,
+    draw,
+    align=center,
+    child anchor=north,
+    anchor=north,
+    l sep+=10pt,
+    edge={->, thick},
+    font=\sffamily
+}
+[Car in door 1
+    [Contestant chooses door 1
+        [Host opens door 2 or 3
+            [Contestant switches to door 3 or 2
+                [No prize]
+            ]
+        ]
+    ]
+    [Contestant chooses door 2
+        [Host opens door 3
+            [Contestant switches to door 1
+                [Prize]
+            ]
+        ]
+    ]
+    [Contestant chooses door 3
+        [Host opens door 2
+            [Contestant switches to door 1
+                [Prize]
+            ]
+        ]
+    ]
+]
+\end{forest}
+
+\begin{center}
+    \textbf{Figure 1: Probability Tree Diagram - Switching} \footnote{The two diagrams are from discussions with Daniel Wells.}
+\end{center}
+
+\newpage
+
+\[
+P(\text{prize} \mid \text{not switch}) = \frac{1}{3}
+\]
+
+\begin{forest}
+for tree={
+    grow=south,
+    draw,
+    align=center,
+    child anchor=north,
+    anchor=north,
+    l sep+=10pt,
+    edge={->, thick},
+    font=\sffamily
+}
+[Car in door 1
+    [Contestant chooses door 1
+        [Host opens door 2 or 3
+            [Contestant sticks with door 1
+                [Prize]
+            ]
+        ]
+    ]
+    [Contestant chooses door 2
+        [Host opens door 3
+            [Contestant sticks with door 2
+                [No prize]
+            ]
+        ]
+    ]
+    [Contestant chooses door 3
+        [Host opens door 2
+            [Contestant sticks with door 3
+                [No prize]
+            ]
+        ]
+    ]
+]
+\end{forest}
+
+\begin{center}
+    \textbf{Figure 2: Probability Tree Diagram - Not Switching}
+\end{center}
+
+\section*{Conclusion}
+The Monty Hall problem offers valuable insights for behavioural economists. It demonstrates how our intuitive judgments can lead us astray and highlights the importance of rigorous statistical thinking in decision-making \cite{kahnemantversky1979}. By understanding the cognitive biases at play and applying tools like Bayes' theorem, we can make more informed and rational choices.
+
+\begin{thebibliography}{99}
+\bibitem{arkesblumer1985} Arkes, H. R., \& Blumer, C. (1985). The psychology of sunk cost. \emph{Organizational Behavior and Human Decision Processes}, \textbf{35}(1), 124-140.
+\bibitem{bayesprice1763} Bayes, T., \& Price, R. (1763). An essay towards solving a problem in the doctrine of chances. \emph{Philosophical Transactions of the Royal Society of London}, \textbf{53}, 370-418.
+\bibitem{burnswieth2004} Burns, B. D., \& Wieth, M. (2004). The collider principle in causal reasoning: Why the Monty Hall dilemma is so hard. \emph{Journal of Experimental Psychology: General}, \textbf{133}(3), 434-449.
+\bibitem{francowatkinsderks2010} Franco-Watkins, A. M., \& Derks, P. L. (2010). Reasoning in the Monty Hall problem: Examining choice behaviour and probability judgements. \emph{Thinking \& Reasoning}, \textbf{16}(1), 1-17.
+\bibitem{gill2002} Gill, J. (2002). \emph{Bayesian methods: A social and behavioural sciences approach}. Chapman and Hall/CRC.
+\bibitem{kahnemantversky1979} Kahneman, D., \& Tversky, A. (1979). Prospect theory: An analysis of decision under risk. \emph{Econometrica}, \textbf{47}(2), 263-291.
+\bibitem{langer1975} Langer, E. J. (1975). The illusion of control. \emph{Journal of Personality and Social Psychology}, \textbf{32}(2), 311-328.
+\bibitem{selvin1975} Selvin, S. (1975). A problem in probability. \emph{The American Statistician}, \textbf{29}(1), 67.
+\bibitem{tenenbaumetal2011} Tenenbaum, J. B., Kemp, C., Griffiths, T. L., \& Goodman, N. D. (2011). How to grow a mind: Statistics, structure, and abstraction. \emph{Science}, \textbf{331}(6022), 1279-1285.
+\bibitem{vazsonyi1999} Vazsonyi, A. (1999). Which door has the Cadillac? \emph{Decision Line}, \textbf{30}(1), 17-19.
+\bibitem{vossavant1990} vos Savant, M. (1990). \emph{Ask Marilyn}. \emph{Parade Magazine}, \textbf{15}, 12.
+\end{thebibliography}
+
+\end{document}
+
