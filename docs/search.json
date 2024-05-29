@@ -4,14 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics\n\n\n\n\n\n\nEconomics, Statistics\n\n\n\n\n\n\n\n\n\nMay 29, 2024\n\n\nLimin Huang\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMay 28, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMay 25, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics\n\n\n\n\n\n\nEconomics, Statistics\n\n\n\n\n\n\n\n\n\nMay 29, 2024\n\n\nLimin Huang\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/the-monty-hall-problem/index.html",
@@ -61,13 +54,6 @@
     "title": "The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics",
     "section": "References",
     "text": "References\n\nArkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes, 35(1), 124-140.\nBayes, T., & Price, R. (1763). An essay towards solving a problem in the doctrine of chances. Philosophical Transactions of the Royal Society of London, 53, 370-418.\nBurns, B. D., & Wieth, M. (2004). The collider principle in causal reasoning: Why the Monty Hall dilemma is so hard. Journal of Experimental Psychology: General, 133(3), 434-449.\nFranco-Watkins, A. M., & Derks, P. L. (2010). Reasoning in the Monty Hall problem: Examining choice behaviour and probability judgements. Thinking & Reasoning, 16(1), 1-17.\nGill, J. (2002). Bayesian methods: A social and behavioural sciences approach. Chapman and Hall/CRC.\nKahneman, D., & Tversky, A. (1979). Prospect theory: An analysis of decision under risk. Econometrica, 47(2), 263-291.\nLanger, E. J. (1975). The illusion of control. Journal of Personality and Social Psychology, 32(2), 311-328.\nSelvin, S. (1975). A problem in probability. The American Statistician, 29(1), 67.\nTenenbaum, J. B., Kemp, C., Griffiths, T. L., & Goodman, N. D. (2011). How to grow a mind: Statistics, structure, and abstraction. Science, 331(6022), 1279-1285.\nVazsonyi, A. (1999). Which door has the Cadillac? Decision Line, 30(1), 17-19.\nvos Savant, M. (1990). Ask Marilyn. Parade Magazine, 15, 12."
-  },
-  {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
   },
   {
     "objectID": "index.html",
