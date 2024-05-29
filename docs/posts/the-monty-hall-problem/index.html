@@ -9,7 +9,7 @@
 <meta name="author" content="Limin Huang">
 <meta name="dcterms.date" content="2024-05-29">
 
-<title>Limin Huang – The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics</title>
+<title>Limin Huang - The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -126,8 +155,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="quarto-title column-body">
       <h1 class="title">The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">Economics</div>
-                <div class="quarto-category">Statistics</div>
+                <div class="quarto-category">Economics, Statistics</div>
               </div>
                   </div>
   </div>
@@ -164,7 +192,102 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The Monty Hall problem, based on the classic game show <em>Let’s Make a Deal</em>, is a captivating brain teaser that has perplexed people for decades. The problem goes like this: a contestant faces three doors, behind one of which is a car, and two goats are behind the other two doors. The contestant picks a door, say Door 1. The host (who knows what is behind each door) opens another door, say Door 3, revealing a goat. The host then asks the contestant if they want to switch to Door 2. Should the contestant switch? [Selvin, 1975]</p>
+<p>Intuitively, most people think the odds are 50-50 at this point, so switching has no advantage. However, this is where the paradox lies. The correct strategy is always to switch doors, as it doubles the chances of winning from <span class="math inline">\(\frac{1}{3}\)</span> to <span class="math inline">\(\frac{2}{3}\)</span> [Vossavant, 1990]. This counterintuitive solution has stumped many, including renowned mathematician Paul Erdős [Vazsonyi, 1999].</p>
+</section>
+<section id="behavioural-economics-perspective" class="level2">
+<h2 class="anchored" data-anchor-id="behavioural-economics-perspective">Behavioural Economics Perspective</h2>
+<p>From a behavioural economics perspective, the Monty Hall problem highlights several cognitive biases that influence decision-making. One such bias is the illusion of control, where people tend to overestimate their ability to control or influence outcomes [Langer, 1975]. In this case, contestants may feel that their initial choice is more likely to be correct, even though the probability has not changed. Another relevant bias is the sunk cost fallacy, where people are reluctant to abandon a choice they’ve already made, even if switching would be advantageous [Arkes and Blumer, 1985].</p>
+</section>
+<section id="bayesian-statistics-perspective" class="level2">
+<h2 class="anchored" data-anchor-id="bayesian-statistics-perspective">Bayesian Statistics Perspective</h2>
+<p>Interestingly, the Monty Hall problem can be elegantly explained using Bayesian statistics. Bayes’ theorem is a mathematical formula that describes how to update probabilities based on new evidence [Bayes and Price, 1763]. In the context of the Monty Hall problem, let us define three events:</p>
+<ul>
+<li><span class="math inline">\(A\)</span>: The car is behind Door 1</li>
+<li><span class="math inline">\(B\)</span>: The car is behind Door 2</li>
+<li><span class="math inline">\(C\)</span>: Host opens Door 3</li>
+</ul>
+<p>Using Bayes’ theorem, we can calculate the probability of the car being behind Door 2, given that the host opened Door 3:</p>
+<p><span class="math display">\[
+P(B \mid C) = \frac{P(C \mid B) \cdot P(B)}{P(C)}
+\label{eq:bayes}
+\]</span></p>
+<p>We know that:</p>
+<p><span class="math display">\[
+P(B) = \frac{1}{3} \quad \text{(initial probability of car being behind Door 2)}
+\]</span></p>
+<p><span class="math display">\[
+P(C \mid B) = 1 \quad \text{(the host must open Door 3 if the car is behind Door 2)}
+\]</span></p>
+<p><span class="math display">\[
+P(C) = \frac{1}{3} \cdot \frac{1}{2} + \frac{1}{3} \cdot 0 + \frac{1}{3} \cdot 1 = \frac{1}{2} \quad \text{(probability of host opening Door 3)}
+\]</span></p>
+<p>To clarify the calculation of <span class="math inline">\(P(C)\)</span>, let us consider all possible scenarios where the host opens Door 3:</p>
+<p><span class="math display">\[
+\begin{aligned}
+P(\text{Car@1 and Host opens 3}) &amp;= P(\text{Car@1}) \times P(\text{Host opens 3} \mid \text{Car@1}) = \frac{1}{3} \times \frac{1}{2} = \frac{1}{6} \\
+P(\text{Car@2 and Host opens 3}) &amp;= P(\text{Car@2}) \times P(\text{Host opens 3} \mid \text{Car@2}) = \frac{1}{3} \times 1 = \frac{1}{3} \\
+P(\text{Car@3 and Host opens 3}) &amp;= P(\text{Car@3}) \times P(\text{Host opens 3} \mid \text{Car@3}) = \frac{1}{3} \times 0 = 0
+\end{aligned}
+\]</span></p>
+<p>Summing these probabilities:</p>
+<p><span class="math display">\[
+P(C) = \frac{1}{6} + \frac{1}{3} + 0 = \frac{1}{2}
+\]</span></p>
+<p>Plugging the values into Equation <span class="math inline">\(\ref{eq:bayes}\)</span>:</p>
+<p><span class="math display">\[
+P(B \mid C) = \frac{1 \cdot \frac{1}{3}}{\frac{1}{2}} = \frac{2}{3}
+\]</span></p>
+<p>This calculation confirms that switching doors yields a <span class="math inline">\(\frac{2}{3}\)</span> probability of winning [Gill, 2002].</p>
+</section>
+<section id="visualisation-of-the-monty-hall-problem" class="level2">
+<h2 class="anchored" data-anchor-id="visualisation-of-the-monty-hall-problem">Visualisation of the Monty Hall Problem</h2>
+<p>Another intuitive way to understand the Monty Hall problem is through a probability tree diagram. The diagrams below illustrate the possible outcomes and their probabilities for the case when the car is behind Door 1:</p>
+<p><span class="math display">\[
+P(\text{prize} \mid \text{switch}) = \frac{2}{3}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="switching-diagram.png" class="img-fluid figure-img"></p>
+<figcaption>Probability Tree Diagram - Switching</figcaption>
+</figure>
+</div>
+<p><strong>Figure 1: Probability Tree Diagram - Switching</strong></p>
+<p><span class="math display">\[
+P(\text{prize} \mid \text{not switch}) = \frac{1}{3}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="not-switching-diagram.png" class="img-fluid figure-img"></p>
+<figcaption>Probability Tree Diagram - Not Switching</figcaption>
+</figure>
+</div>
+<p><strong>Figure 2: Probability Tree Diagram - Not Switching</strong></p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The Monty Hall problem offers valuable insights for behavioural economists. It demonstrates how our intuitive judgments can lead us astray and highlights the importance of rigorous statistical thinking in decision-making [Kahneman and Tversky, 1979]. By understanding the cognitive biases at play and applying tools like Bayes’ theorem, we can make more informed and rational choices.</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ol type="1">
+<li>Arkes, H. R., &amp; Blumer, C. (1985). The psychology of sunk cost. <em>Organizational Behavior and Human Decision Processes</em>, 35(1), 124-140.</li>
+<li>Bayes, T., &amp; Price, R. (1763). An essay towards solving a problem in the doctrine of chances. <em>Philosophical Transactions of the Royal Society of London</em>, 53, 370-418.</li>
+<li>Burns, B. D., &amp; Wieth, M. (2004). The collider principle in causal reasoning: Why the Monty Hall dilemma is so hard. <em>Journal of Experimental Psychology: General</em>, 133(3), 434-449.</li>
+<li>Franco-Watkins, A. M., &amp; Derks, P. L. (2010). Reasoning in the Monty Hall problem: Examining choice behaviour and probability judgements. <em>Thinking &amp; Reasoning</em>, 16(1), 1-17.</li>
+<li>Gill, J. (2002). <em>Bayesian methods: A social and behavioural sciences approach</em>. Chapman and Hall/CRC.</li>
+<li>Kahneman, D., &amp; Tversky, A. (1979). Prospect theory: An analysis of decision under risk. <em>Econometrica</em>, 47(2), 263-291.</li>
+<li>Langer, E. J. (1975). The illusion of control. <em>Journal of Personality and Social Psychology</em>, 32(2), 311-328.</li>
+<li>Selvin, S. (1975). A problem in probability. <em>The American Statistician</em>, 29(1), 67.</li>
+<li>Tenenbaum, J. B., Kemp, C., Griffiths, T. L., &amp; Goodman, N. D. (2011). How to grow a mind: Statistics, structure, and abstraction. <em>Science</em>, 331(6022), 1279-1285.</li>
+<li>Vazsonyi, A. (1999). Which door has the Cadillac? <em>Decision Line</em>, 30(1), 17-19.</li>
+<li>vos Savant, M. (1990). <em>Ask Marilyn</em>. <em>Parade Magazine</em>, 15, 12.</li>
+</ol>
 
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

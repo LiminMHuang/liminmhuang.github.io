@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics\n\n\n\n\n\n\nEconomics\n\n\nStatistics\n\n\n\n\n\n\n\n\n\nMay 29, 2024\n\n\nLimin Huang\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMay 28, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMay 25, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics\n\n\n\n\n\n\nEconomics, Statistics\n\n\n\n\n\n\n\n\n\nMay 29, 2024\n\n\nLimin Huang\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMay 28, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMay 25, 2024\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/welcome/index.html",
@@ -12,6 +12,55 @@
     "title": "Welcome To My Blog",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/the-monty-hall-problem/index.html",
+    "href": "posts/the-monty-hall-problem/index.html",
+    "title": "The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics",
+    "section": "",
+    "text": "The Monty Hall problem, based on the classic game show Let’s Make a Deal, is a captivating brain teaser that has perplexed people for decades. The problem goes like this: a contestant faces three doors, behind one of which is a car, and two goats are behind the other two doors. The contestant picks a door, say Door 1. The host (who knows what is behind each door) opens another door, say Door 3, revealing a goat. The host then asks the contestant if they want to switch to Door 2. Should the contestant switch? [Selvin, 1975]\nIntuitively, most people think the odds are 50-50 at this point, so switching has no advantage. However, this is where the paradox lies. The correct strategy is always to switch doors, as it doubles the chances of winning from \\(\\frac{1}{3}\\) to \\(\\frac{2}{3}\\) [Vossavant, 1990]. This counterintuitive solution has stumped many, including renowned mathematician Paul Erdős [Vazsonyi, 1999]."
+  },
+  {
+    "objectID": "posts/the-monty-hall-problem/index.html#introduction",
+    "href": "posts/the-monty-hall-problem/index.html#introduction",
+    "title": "The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics",
+    "section": "",
+    "text": "The Monty Hall problem, based on the classic game show Let’s Make a Deal, is a captivating brain teaser that has perplexed people for decades. The problem goes like this: a contestant faces three doors, behind one of which is a car, and two goats are behind the other two doors. The contestant picks a door, say Door 1. The host (who knows what is behind each door) opens another door, say Door 3, revealing a goat. The host then asks the contestant if they want to switch to Door 2. Should the contestant switch? [Selvin, 1975]\nIntuitively, most people think the odds are 50-50 at this point, so switching has no advantage. However, this is where the paradox lies. The correct strategy is always to switch doors, as it doubles the chances of winning from \\(\\frac{1}{3}\\) to \\(\\frac{2}{3}\\) [Vossavant, 1990]. This counterintuitive solution has stumped many, including renowned mathematician Paul Erdős [Vazsonyi, 1999]."
+  },
+  {
+    "objectID": "posts/the-monty-hall-problem/index.html#behavioural-economics-perspective",
+    "href": "posts/the-monty-hall-problem/index.html#behavioural-economics-perspective",
+    "title": "The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics",
+    "section": "Behavioural Economics Perspective",
+    "text": "Behavioural Economics Perspective\nFrom a behavioural economics perspective, the Monty Hall problem highlights several cognitive biases that influence decision-making. One such bias is the illusion of control, where people tend to overestimate their ability to control or influence outcomes [Langer, 1975]. In this case, contestants may feel that their initial choice is more likely to be correct, even though the probability has not changed. Another relevant bias is the sunk cost fallacy, where people are reluctant to abandon a choice they’ve already made, even if switching would be advantageous [Arkes and Blumer, 1985]."
+  },
+  {
+    "objectID": "posts/the-monty-hall-problem/index.html#bayesian-statistics-perspective",
+    "href": "posts/the-monty-hall-problem/index.html#bayesian-statistics-perspective",
+    "title": "The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics",
+    "section": "Bayesian Statistics Perspective",
+    "text": "Bayesian Statistics Perspective\nInterestingly, the Monty Hall problem can be elegantly explained using Bayesian statistics. Bayes’ theorem is a mathematical formula that describes how to update probabilities based on new evidence [Bayes and Price, 1763]. In the context of the Monty Hall problem, let us define three events:\n\n\\(A\\): The car is behind Door 1\n\\(B\\): The car is behind Door 2\n\\(C\\): Host opens Door 3\n\nUsing Bayes’ theorem, we can calculate the probability of the car being behind Door 2, given that the host opened Door 3:\n\\[\nP(B \\mid C) = \\frac{P(C \\mid B) \\cdot P(B)}{P(C)}\n\\label{eq:bayes}\n\\]\nWe know that:\n\\[\nP(B) = \\frac{1}{3} \\quad \\text{(initial probability of car being behind Door 2)}\n\\]\n\\[\nP(C \\mid B) = 1 \\quad \\text{(the host must open Door 3 if the car is behind Door 2)}\n\\]\n\\[\nP(C) = \\frac{1}{3} \\cdot \\frac{1}{2} + \\frac{1}{3} \\cdot 0 + \\frac{1}{3} \\cdot 1 = \\frac{1}{2} \\quad \\text{(probability of host opening Door 3)}\n\\]\nTo clarify the calculation of \\(P(C)\\), let us consider all possible scenarios where the host opens Door 3:\n\\[\n\\begin{aligned}\nP(\\text{Car@1 and Host opens 3}) &= P(\\text{Car@1}) \\times P(\\text{Host opens 3} \\mid \\text{Car@1}) = \\frac{1}{3} \\times \\frac{1}{2} = \\frac{1}{6} \\\\\nP(\\text{Car@2 and Host opens 3}) &= P(\\text{Car@2}) \\times P(\\text{Host opens 3} \\mid \\text{Car@2}) = \\frac{1}{3} \\times 1 = \\frac{1}{3} \\\\\nP(\\text{Car@3 and Host opens 3}) &= P(\\text{Car@3}) \\times P(\\text{Host opens 3} \\mid \\text{Car@3}) = \\frac{1}{3} \\times 0 = 0\n\\end{aligned}\n\\]\nSumming these probabilities:\n\\[\nP(C) = \\frac{1}{6} + \\frac{1}{3} + 0 = \\frac{1}{2}\n\\]\nPlugging the values into Equation \\(\\ref{eq:bayes}\\):\n\\[\nP(B \\mid C) = \\frac{1 \\cdot \\frac{1}{3}}{\\frac{1}{2}} = \\frac{2}{3}\n\\]\nThis calculation confirms that switching doors yields a \\(\\frac{2}{3}\\) probability of winning [Gill, 2002]."
+  },
+  {
+    "objectID": "posts/the-monty-hall-problem/index.html#visualisation-of-the-monty-hall-problem",
+    "href": "posts/the-monty-hall-problem/index.html#visualisation-of-the-monty-hall-problem",
+    "title": "The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics",
+    "section": "Visualisation of the Monty Hall Problem",
+    "text": "Visualisation of the Monty Hall Problem\nAnother intuitive way to understand the Monty Hall problem is through a probability tree diagram. The diagrams below illustrate the possible outcomes and their probabilities for the case when the car is behind Door 1:\n\\[\nP(\\text{prize} \\mid \\text{switch}) = \\frac{2}{3}\n\\]\n\n\n\nProbability Tree Diagram - Switching\n\n\nFigure 1: Probability Tree Diagram - Switching\n\\[\nP(\\text{prize} \\mid \\text{not switch}) = \\frac{1}{3}\n\\]\n\n\n\nProbability Tree Diagram - Not Switching\n\n\nFigure 2: Probability Tree Diagram - Not Switching"
+  },
+  {
+    "objectID": "posts/the-monty-hall-problem/index.html#conclusion",
+    "href": "posts/the-monty-hall-problem/index.html#conclusion",
+    "title": "The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics",
+    "section": "Conclusion",
+    "text": "Conclusion\nThe Monty Hall problem offers valuable insights for behavioural economists. It demonstrates how our intuitive judgments can lead us astray and highlights the importance of rigorous statistical thinking in decision-making [Kahneman and Tversky, 1979]. By understanding the cognitive biases at play and applying tools like Bayes’ theorem, we can make more informed and rational choices."
+  },
+  {
+    "objectID": "posts/the-monty-hall-problem/index.html#references",
+    "href": "posts/the-monty-hall-problem/index.html#references",
+    "title": "The Monty Hall Problem: A Fascinating Paradox at the Intersection of Behavioural Economics and Bayesian Statistics",
+    "section": "References",
+    "text": "References\n\nArkes, H. R., & Blumer, C. (1985). The psychology of sunk cost. Organizational Behavior and Human Decision Processes, 35(1), 124-140.\nBayes, T., & Price, R. (1763). An essay towards solving a problem in the doctrine of chances. Philosophical Transactions of the Royal Society of London, 53, 370-418.\nBurns, B. D., & Wieth, M. (2004). The collider principle in causal reasoning: Why the Monty Hall dilemma is so hard. Journal of Experimental Psychology: General, 133(3), 434-449.\nFranco-Watkins, A. M., & Derks, P. L. (2010). Reasoning in the Monty Hall problem: Examining choice behaviour and probability judgements. Thinking & Reasoning, 16(1), 1-17.\nGill, J. (2002). Bayesian methods: A social and behavioural sciences approach. Chapman and Hall/CRC.\nKahneman, D., & Tversky, A. (1979). Prospect theory: An analysis of decision under risk. Econometrica, 47(2), 263-291.\nLanger, E. J. (1975). The illusion of control. Journal of Personality and Social Psychology, 32(2), 311-328.\nSelvin, S. (1975). A problem in probability. The American Statistician, 29(1), 67.\nTenenbaum, J. B., Kemp, C., Griffiths, T. L., & Goodman, N. D. (2011). How to grow a mind: Statistics, structure, and abstraction. Science, 331(6022), 1279-1285.\nVazsonyi, A. (1999). Which door has the Cadillac? Decision Line, 30(1), 17-19.\nvos Savant, M. (1990). Ask Marilyn. Parade Magazine, 15, 12."
   },
   {
     "objectID": "posts/post-with-code/index.html",
