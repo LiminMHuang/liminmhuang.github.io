@@ -28,8 +28,7 @@ Using Bayes' theorem, we can calculate the probability of the car being behind D
 
 $$
 P(B \mid C) = \frac{P(C \mid B) \cdot P(B)}{P(C)}
-\label{eq:bayes}
-$$
+$$ {#eq-bayes}
 
 We know that:
 
@@ -61,7 +60,7 @@ $$
 P(C) = \frac{1}{6} + \frac{1}{3} + 0 = \frac{1}{2}
 $$
 
-Plugging the values into Equation \ref{eq:bayes}:
+Plugging the values into Equation (@eq-bayes):
 
 $$
 P(B \mid C) = \frac{1 \cdot \frac{1}{3}}{\frac{1}{2}} = \frac{2}{3}
@@ -71,7 +70,7 @@ This calculation confirms that switching doors yields a $\frac{2}{3}$ probabilit
 
 ## Visualisation of the Monty Hall Problem
 
-Another intuitive way to understand the Monty Hall problem is through a probability tree diagram. The diagrams below illustrate the possible outcomes and their probabilities for the case when the car is behind Door 1\footnote{Similar diagrams can be drawn for the cases where the car is behind Door 2 or Door 3.}:
+Another intuitive way to understand the Monty Hall problem is through a probability tree diagram. The diagrams below illustrate the possible outcomes and their probabilities for the case when the car is behind Door 1 (Similar diagrams can be drawn for the cases where the car is behind Door 2 or Door 3):
 
 $$
 P(\text{prize} \mid \text{switch}) = \frac{2}{3}
@@ -79,7 +78,7 @@ $$
 
 ![Probability Tree Diagram - Switching](switching-diagram.png)
 
-**Figure 1: Probability Tree Diagram - Switching**\footnote{The two diagrams are from discussions with Daniel Wells.}
+**Figure 1: Probability Tree Diagram - Switching (The two diagrams are from discussions with Daniel Wells)**
 
 $$
 P(\text{prize} \mid \text{not switch}) = \frac{1}{3}

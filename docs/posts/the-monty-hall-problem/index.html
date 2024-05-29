@@ -210,10 +210,9 @@ window.Quarto = {
 <li><span class="math inline">\(C\)</span>: Host opens Door 3</li>
 </ul>
 <p>Using Bayes’ theorem, we can calculate the probability of the car being behind Door 2, given that the host opened Door 3:</p>
-<p><span class="math display">\[
+<p><span id="eq-bayes"><span class="math display">\[
 P(B \mid C) = \frac{P(C \mid B) \cdot P(B)}{P(C)}
-\label{eq:bayes}
-\]</span></p>
+\tag{1}\]</span></span></p>
 <p>We know that:</p>
 <p><span class="math display">\[
 P(B) = \frac{1}{3} \quad \text{(initial probability of car being behind Door 2)}
@@ -236,7 +235,7 @@ P(\text{Car@3 and Host opens 3}) &amp;= P(\text{Car@3}) \times P(\text{Host open
 <p><span class="math display">\[
 P(C) = \frac{1}{6} + \frac{1}{3} + 0 = \frac{1}{2}
 \]</span></p>
-<p>Plugging the values into Equation <span class="math inline">\(\ref{eq:bayes}\)</span>:</p>
+<p>Plugging the values into Equation (<a href="#eq-bayes" class="quarto-xref">Equation&nbsp;1</a>):</p>
 <p><span class="math display">\[
 P(B \mid C) = \frac{1 \cdot \frac{1}{3}}{\frac{1}{2}} = \frac{2}{3}
 \]</span></p>
@@ -244,7 +243,7 @@ P(B \mid C) = \frac{1 \cdot \frac{1}{3}}{\frac{1}{2}} = \frac{2}{3}
 </section>
 <section id="visualisation-of-the-monty-hall-problem" class="level2">
 <h2 class="anchored" data-anchor-id="visualisation-of-the-monty-hall-problem">Visualisation of the Monty Hall Problem</h2>
-<p>Another intuitive way to understand the Monty Hall problem is through a probability tree diagram. The diagrams below illustrate the possible outcomes and their probabilities for the case when the car is behind Door 1:</p>
+<p>Another intuitive way to understand the Monty Hall problem is through a probability tree diagram. The diagrams below illustrate the possible outcomes and their probabilities for the case when the car is behind Door 1 (Similar diagrams can be drawn for the cases where the car is behind Door 2 or Door 3):</p>
 <p><span class="math display">\[
 P(\text{prize} \mid \text{switch}) = \frac{2}{3}
 \]</span></p>
@@ -254,7 +253,7 @@ P(\text{prize} \mid \text{switch}) = \frac{2}{3}
 <figcaption>Probability Tree Diagram - Switching</figcaption>
 </figure>
 </div>
-<p><strong>Figure 1: Probability Tree Diagram - Switching</strong></p>
+<p><strong>Figure 1: Probability Tree Diagram - Switching (The two diagrams are from discussions with Daniel Wells)</strong></p>
 <p><span class="math display">\[
 P(\text{prize} \mid \text{not switch}) = \frac{1}{3}
 \]</span></p>
